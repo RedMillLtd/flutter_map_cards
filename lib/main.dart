@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   static const LatLng _initialLatLong = LatLng(51.483100, -0.009584);
 
   @override
@@ -40,7 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Center(child: MapCardWidget(location: _initialLatLong, title: "Cutty Sark", address: "Here, Greenwich, SE11 4EF"))],
+          children: <Widget>[
+            Center(
+                child: MapCardWidget(
+              location: _initialLatLong,
+              title: "Cutty Sark",
+              address: "Here, Greenwich, SE11 4EF",
+              showPin: true,
+              zoomLevel: 12.0,
+            ))
+          ],
         ),
       ),
     );

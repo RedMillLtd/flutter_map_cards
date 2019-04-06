@@ -18,7 +18,7 @@
     <application
 
         android:name="io.flutter.app.FlutterApplication"
-        android:label="map_cards"
+        android:label="FlutterMapCard"
         android:icon="@mipmap/ic_launcher"
         tools:ignore="GoogleAppIndexingWarning">
         <activity

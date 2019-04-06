@@ -44,9 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: MapCardWidget(
               location: _initialLatLong,
               title: "Cutty Sark",
-              address: "Here, Greenwich, SE11 4EF",
+              address: "King William Walk, East Greenwich, London SE10 9HT",
               showPin: true,
-              zoomLevel: 12.0,
+              zoomLevel: 11.0,
             ))
           ],
         ),

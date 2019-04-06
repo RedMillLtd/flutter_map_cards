@@ -5,8 +5,11 @@ class MapCardWidget extends StatefulWidget {
   final LatLng location;
   final String title;
   final String address;
+  final bool showPin;
+  final double zoomLevel;
 
-  const MapCardWidget({Key key, this.location, this.title, this.address})
+  const MapCardWidget(
+      {Key key, this.location, this.title, this.address, this.showPin = true, this.zoomLevel = 15.0})
       : super(key: key);
 
   @override
@@ -27,7 +30,7 @@ class _MapStatefulState extends State<MapCardWidget> {
 
   GoogleMap _mapObject() {
     final CameraPosition _camPosition =
-        CameraPosition(target: widget.location, zoom: 14.0);
+        CameraPosition(target: widget.location, zoom: widget.zoomLevel);
 
     String markerIdVal = widget.location.latitude.toString() +
         widget.location.longitude.toString();
@@ -50,7 +53,7 @@ class _MapStatefulState extends State<MapCardWidget> {
     bool _myLocationEnabled = false;
 
     return GoogleMap(
-      markers: Set<Marker>.of(markersMap.values),
+      markers: widget.showPin ? Set<Marker>.of(markersMap.values) : Set(),
       initialCameraPosition: _camPosition,
       compassEnabled: _compassEnabled,
       cameraTargetBounds: _cameraTargetBounds,

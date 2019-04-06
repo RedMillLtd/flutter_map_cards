@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Center(child: MapCardWidget(location: _initialLatLong, title: "Cutty Sark", address: "Here, Greenwich, SE11 4EF",))],
+          children: <Widget>[Center(child: MapCardWidget(location: _initialLatLong, title: "Cutty Sark", address: "Here, Greenwich, SE11 4EF"))],
         ),
       ),
     );
